@@ -1,0 +1,20 @@
+text = input("Enter text to write to the file: ")
+
+# Write to output.txt
+with open("../../../PyCharmMiscProject/output.txt", "w") as file:
+    file.write(text + "\n")
+
+print("Data successfully written to output.txt.")
+
+more_text = input("Enter additional text to append: ")
+
+# Append to same file
+with open("../../../PyCharmMiscProject/output.txt", "a") as file:
+    file.write(more_text + "\n")
+
+print("Data successfully appended.")
+
+print("\nFinal content of output.txt:")
+
+with open("../../../PyCharmMiscProject/output.txt", "r") as file:
+    print(file.read())
